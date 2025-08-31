@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Material Organizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📚 Study Material Organizer</h1>
+  <div class="controls">
+    <input id="subject" placeholder="Subject" />
+    <input id="title" placeholder="Title" />
+    <input id="url" placeholder="Link (YouTube/Website)" />
+    <input id="timestamp" placeholder="YouTube Timestamp (mm:ss)" />
+    <textarea id="notes" placeholder="Notes"></textarea>
+    <input type="file" id="fileUpload" />
+    <button onclick="addMaterial()">Add Material</button>
+    <button onclick="exportData()">Export JSON</button>
+    <input type="file" id="importFile" onchange="importData(event)" />
+    <button onclick="toggleTheme()">🌙/☀️</button>
+  </div>
+
+  <div id="dropZone">⬇️ Drag & Drop Files Here</div>
+
+  <div class="controls">
+    <input id="search" placeholder="Search..." oninput="renderMaterials()" />
+    <select id="filterSubject" onchange="renderMaterials()">
+      <option value="">All Subjects</option>
+    </select>
+    <select id="sortBy" onchange="renderMaterials()">
+      <option value="recent">Most Recent</option>
+      <option value="favorites">Favorites</option>
+      <option value="completed">Completed</option>
+    </select>
+  </div>
+
+  <div id="materials"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

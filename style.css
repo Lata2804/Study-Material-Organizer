@@ -1,0 +1,48 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+:root {
+  --bg: #f4f6f8;
+  --text: #222;
+  --card: #ffffff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --danger: #dc3545;
+  --favorite: #ffc107;
+}
+.dark {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --card: #1e1e1e;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+  --favorite: #ffc107;
+}
+h1 { text-align: center; margin-bottom: 20px; color: var(--primary); }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center; }
+input, select, button, textarea { padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.95rem; }
+button { background: var(--primary); color: #fff; cursor: pointer; border: none; transition: background 0.3s; }
+button:hover { background: #0056b3; }
+.material { border-radius: 10px; padding: 15px; margin: 10px 0; background: var(--card); box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s; }
+.material:hover { transform: translateY(-3px); }
+.favorite { color: var(--favorite); }
+.completed { text-decoration: line-through; opacity: 0.6; }
+.folder { border-radius: 12px; background: var(--card); margin: 15px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden; }
+.folder-header { padding: 15px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; background: var(--primary); color: #fff; transition: background 0.3s; }
+.folder-header:hover { background: #0056b3; }
+.folder-content { display: none; padding: 15px; }
+.file-link { display: block; margin-top: 5px; color: var(--secondary); text-decoration: none; }
+.file-link:hover { text-decoration: underline; }
+#dropZone { border: 2px dashed var(--secondary); padding: 30px; text-align: center; border-radius: 10px; margin-bottom: 20px; background: var(--card); color: var(--secondary); font-weight: 500; transition: background 0.3s, border-color 0.3s; }
+#dropZone.dragover { border-color: var(--primary); background: #e3f2fd; color: var(--primary); }
+.progress-container { background: #ddd; border-radius: 5px; height: 10px; margin-top: 5px; }
+.progress-bar { height: 100%; border-radius: 5px; background: var(--success); transition: width 0.3s; }
+.folder-header span { font-weight: 400; }
